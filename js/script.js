@@ -80,7 +80,7 @@ function changeCategories(category){
   } else {
     if (!categoriesToggle) {
       let filteredStyles = document.createElement('link');
-      filteredStyles.href = '../css/filtered_portfolio.css';
+      filteredStyles.href = './css/filtered_portfolio.css';
       filteredStyles.type = 'text/css';
       filteredStyles.rel = 'stylesheet';
       filteredStyles.setAttribute('data-identifier', 'filtered-styles');
