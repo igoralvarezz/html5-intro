@@ -1,0 +1,50 @@
+/* Migrate to JS:
+
+/* ===================================== */
+/* Portfolio (Tag Filter Active Styles) */
+/* =================================== */
+
+#work {
+  margin: 0 5vw 5vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  width: 80%;
+  overflow: hidden;
+  gap: 1vw;
+}
+#work .item {
+  grid-row-start: auto !important;
+  grid-row-end: span 1 !important;
+  grid-column-start: auto !important;
+  grid-column-end: span 4 !important;
+  max-height:22vh;
+  overflow: hidden;
+}
+#work img{
+  max-width: 280%;
+  max-height:350%;
+  position: relative;
+  top:50%;
+  left:50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+@media screen and (min-width: 1000px){
+  #work .item {
+    grid-row-start: auto !important;
+    grid-row-end: span 1 !important;
+    grid-column-start: auto !important;
+    grid-column-end: span 1 !important;
+    max-height:30vh;
+    overflow: hidden;
+  }
+  #work img{
+    max-width: 250%;
+    max-height: 450%;
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
