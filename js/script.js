@@ -14,18 +14,18 @@ mobileMenuBtn.addEventListener('click', ()=>{
   if (!mobileMenuToggle) {
     mobileMenu.style.display = 'flex';
     mobileMenuToggle = true;
-    mobileMenuBtn.querySelector('img').src = '../img/close-icon.svg';
+    mobileMenuBtn.querySelector('img').src = './img/close-icon.svg';
   } else {
     mobileMenu.style.display = 'none';
     mobileMenuToggle = false;
-    mobileMenuBtn.querySelector('img').src = '../img/menu-icon.svg';
+    mobileMenuBtn.querySelector('img').src = './img/menu-icon.svg';
   }
 });
 mobileMenuItems.forEach((link) => {
   link.addEventListener('click', ()=> {
       mobileMenu.style.display = 'none';
       mobileMenuToggle = false;
-      mobileMenuBtn.querySelector('img').src = '../img/menu-icon.svg';
+      mobileMenuBtn.querySelector('img').src = './img/menu-icon.svg';
   });
 });
 
