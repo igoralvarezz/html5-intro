@@ -7,6 +7,68 @@ const mobileMenuBtn = document.querySelector('#mobile-menu-btn'),
       contactForm = document.querySelector('#contact form'),
       body = document.querySelector('body');
 
+// Slider Functionality
+const slides = slider.querySelectorAll('.slide'),
+      slideControls = slider.querySelectorAll('.controls a');
+      slideTime = 6000;
+
+let currentSlide = 0,
+    sliderAction,
+    autoSlide = setInterval(()=>{
+    sliderAction = 'next';
+      updateSlides();
+    },slideTime);
+
+function updateSlides() {
+  slides[currentSlide].classList = 'slide active animate';
+  slides[currentSlide].addEventListener('transitionend', changeSlide);
+}
+function changeSlide(){
+  if (sliderAction == 'next') {
+    slides[currentSlide].classList = 'slide';
+
+    if (currentSlide == slides.length - 1){
+      currentSlide = 0;
+    } else {
+      currentSlide = currentSlide + 1;
+    }
+
+  } else {
+      slides[currentSlide].classList = 'slide';
+      if (currentSlide === 0){
+        currentSlide = 3;
+      } else {
+        currentSlide = currentSlide - 1;
+      }
+  }
+  slides[currentSlide].classList = 'slide active';
+  console.log('current slide =', currentSlide, 'action =', sliderAction);
+}
+slides.forEach((slide) => {
+  slide.addEventListener('click', ()=>{
+    openPortfolioOverlay(slide);
+  })
+});
+
+slideControls.forEach((control) => {
+  control.addEventListener('click', (e)=>{
+    e.preventDefault();
+    if (control.id == '#prev-slide'){
+      sliderAction = 'prev'
+      updateSlides();
+    } else {
+      sliderAction = 'next';
+      updateSlides();
+    };
+    clearInterval(autoSlide);
+    autoSlide = setInterval(()=>{
+    sliderAction = 'next';
+      updateSlides();
+    },slideTime);
+  });
+});
+
+
 // code for mobile menu interaction
 let mobileMenuToggle = false;
 
@@ -139,15 +201,18 @@ works.forEach((item) => {
 });
 
 backLinkOverlay.forEach((item) => {
-  item.addEventListener('click', ()=>{
+  item.addEventListener('click', (e)=>{
+    e.preventDefault();
     closePortfolioOverlay();
   });
 });
 
-closeOverlayDeskBtn.addEventListener('click', ()=>{
+closeOverlayDeskBtn.addEventListener('click', (e)=>{
+  e.preventDefault();
   closePortfolioOverlay();
 });
-closeOverlayMobileBtn.addEventListener('click', ()=>{
+closeOverlayMobileBtn.addEventListener('click', (e)=>{
+  e.preventDefault();
   closePortfolioOverlay();
 });
 
@@ -158,64 +223,4 @@ window.addEventListener('resize', ()=>{
   } else {
     mobileMenuBtn.style.display = 'none';
   }
-});
-
-
-// Slider Functionality
-const slides = slider.querySelectorAll('.slide'),
-      slideControls = slider.querySelectorAll('.controls a');
-
-let currentSlide = 0,
-    sliderAction,
-    autoSlide = setInterval(()=>{
-    sliderAction = 'next';
-      updateSlides();
-    },6000);
-
-function updateSlides() {
-  slides[currentSlide].classList = 'slide active animate';
-  slides[currentSlide].addEventListener('transitionend', changeSlide);
-}
-function changeSlide(){
-  if (sliderAction == 'next') {
-    slides[currentSlide].classList = 'slide';
-
-    if (currentSlide == slides.length - 1){
-      currentSlide = 0;
-    } else {
-      currentSlide = currentSlide + 1;
-    }
-
-  } else {
-      slides[currentSlide].classList = 'slide';
-      if (currentSlide === 0){
-        currentSlide = 3;
-      } else {
-        currentSlide = currentSlide - 1;
-      }
-  }
-  slides[currentSlide].classList = 'slide active';
-  console.log('current slide =', currentSlide, 'action =', sliderAction);
-}
-slides.forEach((slide) => {
-  slide.addEventListener('click', ()=>{
-    openPortfolioOverlay(slide);
-  })
-});
-
-slideControls.forEach((control) => {
-  control.addEventListener('click', ()=>{
-    if (control.id == '#prev-slide'){
-      sliderAction = 'prev'
-      updateSlides();
-    } else {
-      sliderAction = 'next';
-      updateSlides();
-    };
-    clearInterval(autoSlide);
-    autoSlide = setInterval(()=>{
-    sliderAction = 'next';
-      updateSlides();
-    },6000);
-  });
 });
