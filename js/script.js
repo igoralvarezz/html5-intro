@@ -72,7 +72,8 @@ slideControls.forEach((control) => {
 // code for mobile menu interaction
 let mobileMenuToggle = false;
 
-mobileMenuBtn.addEventListener('click', ()=>{
+mobileMenuBtn.addEventListener('click', (e)=>{
+  e.preventDefault();
   if (!mobileMenuToggle) {
     mobileMenu.style.display = 'flex';
     mobileMenuToggle = true;
