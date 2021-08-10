@@ -1,2 +1,2 @@
 # Capstone Website
-Test website for the Web Design for Everyone Specialization Capstone.
+Capstone Project for the Web Design For Everyone Coursera Specialization.
