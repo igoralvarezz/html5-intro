@@ -40,7 +40,7 @@
 /* Header and Site Navigation styles */
 /* ================================ */
 body > header{
-  color: #686868;
+  color: #878787;
   position: fixed;
   top: 0;
   left:0;
@@ -117,7 +117,7 @@ body > header > nav > a:hover{
   cursor: default;
 }
 .soon-link:hover {
-  color: #686868;
+  color: #878787;
 }
 .soon-link:active {
   pointer-events: none;
@@ -223,7 +223,7 @@ body > header > nav > a:hover{
   align-self: flex-start;
   font-size: 1.25em;
   font-weight: bold;
-  color: #737373;
+  color: #878787;
 
   position: absolute;
   top: 2%;
@@ -234,7 +234,7 @@ body > header > nav > a:hover{
 /* Slider Categories Style */
 #slider .slide .categories {
   text-align: center;
-  color: #737373;
+  color: #878787;
   overflow: hidden;
   max-width: 90%;
   position: absolute;
@@ -354,7 +354,7 @@ main #contact-icons a:first-of-type{
 #portfolio{
   box-sizing: border-box;
   background-color: #151515;
-  color: #686868;
+  color: #878787;
 
   width: 100%;
   min-height: 600px;
@@ -377,7 +377,7 @@ main #contact-icons a:first-of-type{
 }
 #portfolio nav a{
   text-decoration: none;
-  color: #686868;
+  color: #878787;
   padding: 1%;
 
   transition: color 0.3s;
@@ -728,7 +728,7 @@ footer img{
   body > header {
     position:relative;
     background-color: #151515;
-    color: #686868;
+    color: #878787;
     z-index:auto;
   }
 
@@ -770,7 +770,7 @@ footer img{
   }
   body > header > nav a{
     text-decoration: none;
-    color: #686868;
+    color: #878787;
     padding: 0;
 
     transition: color 0.3s;
@@ -791,16 +791,6 @@ footer img{
   }
 
   #slider .slide .title {
-  /* text-align: center;
-  font-size: 10vw;
-  color: transparent;
-  text-transform: uppercase;
-  -webkit-text-stroke: 0.15vw rgba(115,115,115,0.4);
-  text-stroke-width: 20px;
-  text-stroke-color: #737373;
-  padding: 0;
-  margin: 0; */
-
   position:absolute;
   bottom: 22%;
   }
@@ -814,7 +804,7 @@ footer img{
   max-width: 3%;
   font-size: 1.25em;
   font-weight: bold;
-  color: #737373;
+  color: #878787;
   margin: 0;
   padding:0;
 
@@ -827,7 +817,7 @@ footer img{
   /* Slider Categories Style */
   #slider .slide .categories {
   text-align: center;
-  color: #737373;
+  color: #878787;
   max-width: 90%;
   margin: 0;
   padding: 0;
