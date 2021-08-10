@@ -522,7 +522,9 @@ main #contact-icons a:first-of-type{
 #portfolio-overlay header#desk{
   display:none;
 }
-
+#portfolio-overlay h3 {
+  display:none; /* for validation only */
+}
 #portfolio-overlay a#close-overlay-btn-mobile{
     display: inline-block;
     position: fixed;
