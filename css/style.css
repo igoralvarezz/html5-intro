@@ -211,7 +211,9 @@ body > header > nav > a:hover{
  bottom: max(15%, 10vh);
  font-size: 1.8em;
  font-weight: bold;
-  color: #B5B5B5;
+ color: #B5B5B5;
+ text-align: center;
+ padding: 0 2vw
 }
 
 /* Slider Vertical Tags Style */
@@ -362,7 +364,7 @@ main #contact-icons a:first-of-type{
   align-items: center;
   justify-content: flex-start;
 }
-#portfolio h1{
+#portfolio h2{
   color: #B5B5B5;
   margin: 6vh 0 0 0;
   padding: 0;
@@ -422,10 +424,11 @@ main #contact-icons a:first-of-type{
   max-height: 100%;
   overflow: hidden;
 }
-#work .item-overlay p {
-  text-align:center;
+#work .item-overlay h3 {
   font-size: 0.95em;
   padding: 1.5vw;
+  font-weight: normal;
+  text-align: center;
 }
 #work .item .item-overlay {
   display: flex;
@@ -550,7 +553,7 @@ main #contact-icons a:first-of-type{
   margin: 0;
 }
 
-#portfolio-overlay h1{
+#portfolio-overlay h2{
   font-size: 1.3em;
   text-align: center;
   padding: 0;
@@ -914,7 +917,7 @@ footer img{
   /* ============================= */
   /* Portfolio/Work Area styles  */
   /* =========================== */
-  #portfolio h1{
+  #portfolio h2{
     margin: 3vw 0 1vw;
   }
   #portfolio nav{
@@ -928,17 +931,17 @@ footer img{
   display: none;
   }
   #work{
-  margin: 0 5vw 5vw;
-  width: 80%;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(4, 10vw);
-  gap: 0.6vw;
+    margin: 0 5vw 5vw;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 10vw);
+    gap: 0.6vw;
   }
 
   #work img {
     max-width: 150%;
-    max-height: 130%;
+    max-height: 140%;
     position: relative;
     top:50%;
     left:50%;
@@ -1038,7 +1041,7 @@ footer img{
     display: none;
   }
 
-  #portfolio-overlay article h1,
+  #portfolio-overlay article h2,
   #portfolio-overlay article .categories,
   #portfolio-overlay article .client,
   #portfolio-overlay article .responsabilities,
@@ -1054,9 +1057,10 @@ footer img{
     text-align: left;
 
   }
-  #portfolio-overlay article h1{
+  #portfolio-overlay article h2{
     margin: 2vw;
     font-size: 2.5em;
+    padding: 0;
   }
   #portfolio-overlay article .categories{
     font-size: 1.8em;
